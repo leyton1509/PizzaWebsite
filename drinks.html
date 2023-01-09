@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head class>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Leytons' Pizza</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+
+  <body>
+
+    <style>
+      body {
+        background-image: url('Images/spaceWallpaper.png');
+      }
+      </style>
+
+
+    <header>
+      <nav class = "Navigation">
+        <ul><a href="./index.html">Home</a></ul>
+        <ul><a href="./pizzas.html">Pizzas</a></ul>
+        <ul><a href="./sides.html">Sides</a></ul>
+        <ul><a href="./drinks.html">Drinks</a></ul>
+        <ul><a href="./basket.html">Basket</a></ul>
+    </nav>
+    </header>
+
+    <article>
+        <section class = "columns-desktop">
+
+            <div class = "ItemOption">
+                <aside><img src="Images/coke.jpg" alt = "Coke" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Coke</div>
+                    <div class = "price">£1.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/coke.jpg</div>
+    
+                <select name="sizeOfDrink" onchange="changePrice(this)" id = "sizeOfDrink" class = "SelectDrinkSize" class="SelectMenu">
+                    <option value="500ml" selected>500ml</option>
+                    <option value="1L">1L</option>
+                    <option value="2L">2L</option>
+                    <option value="3L">3L Large</option>
+                </select>
+                <br>
+                <button data-order="_coke">Add to Basket</button>
+            </div>
+
+            <div class = "ItemOption">
+                <aside><img src="Images/fanta.png" alt = "Fanta" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Fanta</div>
+                    <div class = "price">£1.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/fanta.png</div>
+                <select name="sizeOfDrink" onchange="changePrice(this)" id = "sizeOfDrink" class = "SelectDrinkSize" class="SelectMenu">
+                    <option value="500ml" selected>500ml</option>
+                    <option value="1L">1L</option>
+                    <option value="2L">2L</option>
+                    <option value="3L">3L</option>
+                </select>
+                <br>
+                <button data-order="_fanta">Add to Basket</button>
+            </div>
+
+            <div class = "ItemOption">
+                <aside><img src="Images/sprite.jpg" alt = "Sprite" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Sprite</div>
+                    <div class = "price">£1.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/sprite.jpg</div>
+                <select name="sizeOfDrink" onchange="changePrice(this)" id = "sizeOfDrink" class = "SelectDrinkSize" class="SelectMenu">
+                    <option value="500ml" selected>500ml</option>
+                    <option value="1L">1L</option>
+                    <option value="2L">2L</option>
+                    <option value="3L">3L Large</option>
+                </select>
+                <br>
+                <button data-order="_sprite">Add to Basket</button>
+            </div>
+
+        </section>
+    </article>
+
+    <footer class = "footer">
+    </footer>   
+
+  </body>
+
+  <script>
+    function changePrice(selectObject) {
+        var size = selectObject.value;
+        const container = selectObject.parentNode;
+        if(size == "500ml"){
+            container.querySelector(".price").innerText = "£1.00";
+        }else if(size == "1L"){
+            container.querySelector(".price").innerText = "£1.50";
+        }
+        else if(size == "2L"){
+            container.querySelector(".price").innerText = "£2.00";
+        }
+        else if(size == "3L"){
+            container.querySelector(".price").innerText = "£3.00";
+        }
+    }
+</script>
+
+<script>
+
+    var items = []
+    var itemsJSON = localStorage.getItem("items");
+    var itemsParsed = JSON.parse(itemsJSON);
+    if(itemsParsed!=null){
+        for (var i = 0; i < itemsParsed.length; i++) {
+        items.push(itemsParsed[i]);
+    }
+    }
+
+    window.addEventListener("DOMContentLoaded", function(e){
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(button){
+
+            button.addEventListener("click", function(e){
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const orderItem = {
+                    itemType: "drink",
+                    id: button.getAttribute("data-order"),
+                    size: container.querySelector(".SelectDrinkSize").value,
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    image: container.querySelector(".urlItem").innerText,
+                };
+                items.push(orderItem);
+                localStorage.setItem("items", JSON.stringify(items));
+            });
+
+        });
+    });
+
+  </script>
+
+  
+
+  
+</html>

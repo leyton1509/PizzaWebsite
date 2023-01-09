@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head class>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Leytons' Pizza</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+
+  <body>
+
+    <style>
+        body {
+          background-image: url('Images/spaceWallpaper.png');
+        }
+        </style>
+
+
+    <header>
+        <nav class = "Navigation">
+            <ul><a href="./index.html">Home</a></ul>
+            <ul><a href="./pizzas.html">Pizzas</a></ul>
+            <ul><a href="./sides.html">Sides</a></ul>
+            <ul><a href="./drinks.html">Drinks</a></ul>
+            <ul><a href="./basket.html">Basket</a></ul>
+        </nav>
+    </header>
+
+    <article>
+
+    
+
+        <section class = "columns-desktop">
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/cheesePizza.jpg" alt = "Cheese Pizza" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Cheese Pizza</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/cheesePizza.jpg</div>
+        
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_cheesePizza">Add to Basket</button>
+                </div>
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/meatball.webp" alt = "Meatball Mariana" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Meatball Mariana</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/meatball.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_meatballMariana">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/cheeseburger.webp" alt = "The Cheese Burger" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">The Cheese Burger</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/cheeseburger.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_cheeseBurger">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/pepporoni.webp" alt = "Pepporoni" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Pepporoni</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/pepporoni.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_pepporoni">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/VegiSupreme.webp" alt = "Vegi Supreme" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Vegi Supreme</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/VegiSupreme.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_vegisupreme">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/Hawaiian.webp" alt = "Hawaiian" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Hawaiian</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/Hawaiian.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_hawaiian">Add to Basket</button>
+                </div>
+
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/HotAndSpicy.webp" alt = "Hot And Spicy" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Hot And Spicy</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/HotAndSpicy.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_HotAndSpicy">Add to Basket</button>
+                </div>
+                
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/NewYorker.webp" alt = "New Yorker" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">New Yorker</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/NewYorker.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_NewYorker">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/Meateor.webp" alt = "Meateor" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Meateor</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/Meateor.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_Meateor">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/Sizzler.webp" alt = "Sizzler" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Sizzler</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/Sizzler.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_Sizzler">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/Tandori.webp" alt = "Tandori" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Tandori</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/Tandori.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_Tandori">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/ChickenFeast.webp" alt = "Chicken Feast" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Chicken Feast</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/ChickenFeast.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_ChickenFeast">Add to Basket</button>
+                </div>
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/SpicySausage.webp" alt = "Spicy Sausage" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Spicy Sausage</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/SpicySausage.webp</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_SpicySausage">Add to Basket</button>
+                </div>
+                
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/meatFeastPizza.jpg" alt = "Meat Feast Pizza" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">Meat Feast Pizza</div>
+                        <div class = "price">£6.00</div>    
+                    </div>
+                    <div style="display: none;" class = "urlItem">Images/meatFeastPizza.jpg</div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_meatFeastPizza">Add to Basket</button>
+                </div>
+
+
+
+
+                <div class = "ItemOption">
+                    <aside><img src="Images/halfhalf.jpg" alt = "Half and Half" class="image"></aside>
+                    <div class = "columns">
+                        <div class = "title">The Half and Half</div>
+                        <div class = "price">£6.00</div>  
+                    </div>
+                    <div style="display: none;"  class="urlItem">Images/halfhalf.jpg</div>
+                    <div>
+                        <select name="pizzaHalfOne" id = "pizzaHalfOne" class = "SelectMenuOne" class="SelectMenu">
+                            <option value="CheesePizza" selected>Cheese Pizza</option>
+                            <option value="MeatFeast" >Meat Feast</option>
+                        </select>
+                        <select name="pizzaHalfTwo" id = "pizzaHalfTwo" class = "SelectMenuTwo" class="SelectMenu">
+                            <option value="CheesePizza" selected>CheesePizza</option>
+                            <option value="MeatFeast" >Meat Feast</option>
+                        </select>
+                    </div>
+                    <select name="sizeOfPizza" onchange="changePrice(this)" id = "sizeOfPizza" class = "SelectSizePizza" class="SelectMenu">
+                        <option value="Small" selected>Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="ExtraLarge">Extra Large</option>
+                    </select>
+                    <br>
+                    <button data-order="_5050Pizza">Add to Basket</button>
+                </div>
+
+        </section>
+
+        <br> <br> <br> <br> <br> 
+        
+
+    
+
+
+    </article>
+
+  </body>
+
+  <script>
+
+        function changePrice(selectObject) {
+            var size = selectObject.value;
+            const container = selectObject.parentNode;
+            if(size == "Small"){
+                container.querySelector(".price").innerText = "£6.00";
+            }else if(size == "Medium"){
+                container.querySelector(".price").innerText = "£8.00";
+            }
+            else if(size == "Large"){
+                container.querySelector(".price").innerText = "£10.00";
+            }
+            else if(size == "ExtraLarge"){
+                container.querySelector(".price").innerText = "£12.00";
+            }
+        }
+  </script>
+
+  <script>
+
+    var items = []
+    var itemsJSON = localStorage.getItem("items");
+    var itemsParsed = JSON.parse(itemsJSON);
+    if(itemsParsed!=null){
+        for (var i = 0; i < itemsParsed.length; i++) {
+        items.push(itemsParsed[i]);
+    }
+    }
+
+   
+
+    window.addEventListener("DOMContentLoaded", function(e){
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(button){
+
+            button.addEventListener("click", function(e){
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const pizzaType = button.getAttribute("data-order");
+
+                const firstHalfOfPizza = container.querySelector(".SelectMenuOne");
+                const secondHalfOfPizza= container.querySelector(".SelectMenuTwo");
+
+                const pizzaSize = container.querySelector(".SelectSizePizza").value;
+
+                if(firstHalfOfPizza != null){
+                    if(secondHalfOfPizza != null){
+                        const firstHalfPizzaName = firstHalfOfPizza.value;
+                        const secondHalfPizzaName = secondHalfOfPizza.value;
+
+                        const orderItem = {
+                            itemType: "pizza",
+                            id: pizzaType,
+                            size: pizzaSize,
+                            title: container.querySelector(".title").innerText,
+                            price: container.querySelector(".price").innerText,
+                            image: container.querySelector(".urlItem").innerText,
+                            pizzaHalfOne: firstHalfPizzaName,
+                            pizzaHalfTwo: secondHalfPizzaName
+                        };
+
+                        items.push(orderItem);
+                        localStorage.setItem("items", JSON.stringify(items));
+
+                    }
+                }
+                else{
+                    const orderItem = {
+                        itemType: "pizza",
+                        id: pizzaType,
+                        size: pizzaSize,
+                        title: container.querySelector(".title").innerText,
+                        price: container.querySelector(".price").innerText,
+                        image: container.querySelector(".urlItem").innerText,
+                        pizzaHalfOne: "",
+                        pizzaHalfTwo: ""
+                    };
+                        items.push(orderItem);
+                        localStorage.setItem("items", JSON.stringify(items));
+                }
+
+                //const url = window.location.href.replace("index.html", "basket.html")
+                //window.location.href = url;
+
+            });
+
+        });
+    });
+
+  </script>
+
+  <footer class = "footer">
+  </footer>   
+</html>

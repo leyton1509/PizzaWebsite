@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head class>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Leytons' Pizza</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+
+  <body>
+
+    <style>
+      body {
+        background-image: url('Images/spaceWallpaper.png');
+      }
+      </style>
+
+    
+
+    <header>
+      <nav class = "Navigation">
+        <ul><a href="./index.html">Home</a></ul>
+        <ul><a href="./pizzas.html">Pizzas</a></ul>
+        <ul><a href="./sides.html">Sides</a></ul>
+        <ul><a href="./drinks.html">Drinks</a></ul>
+        <ul><a href="./basket.html">Basket</a></ul>
+    </nav>
+    </header>
+
+    <article>
+        <section class = "columns-desktop">
+
+            <div class = "ItemOption">
+                <aside><img src="Images/GarlicDippers.webp" alt = "Garlic Dippers" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Garlic Dippers (6pc)</div>
+                    <div class = "price">£3.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/GarlicDippers.webp</div>
+                <br>
+                <button data-order="_GarlicDippers">Add to Basket</button>
+            </div>
+
+
+            <div class = "ItemOption">
+                <aside><img src="Images/ChickenKickers.webp" alt = "Chicken Kickers" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Chicken Kickers (7pc)</div>
+                    <div class = "price">£3.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/ChickenKickers.webp</div>
+                <br>
+                <button data-order="_ChickenKickers">Add to Basket</button>
+            </div>
+
+
+            <div class = "ItemOption">
+                <aside><img src="Images/BBQWings.webp" alt = "BBQ Wings" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">BBQ Wings (8pc)</div>
+                    <div class = "price">£3.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/BBQWings.webp</div>
+                <br>
+                <button data-order="_BBQWings">Add to Basket</button>
+            </div>
+
+
+            <div class = "ItemOption">
+                <aside><img src="Images/ChickenStrippers.webp" alt = "Chicken Strippers" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">ChickenStrippers (6pc)</div>
+                    <div class = "price">£3.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/ChickenStrippers.webp</div>
+                <br>
+                <button data-order="_ChickenStrippers">Add to Basket</button>
+            </div>
+
+
+            <div class = "ItemOption">
+                <aside><img src="Images/Wedges.webp" alt = "Wedges" class="image"></aside>
+                <div class = "columns">
+                    <div class = "title">Wedges</div>
+                    <div class = "price">£3.00</div>    
+                </div>
+                <div style="display: none;" class = "urlItem">Images/Wedges.webp</div>
+                <br>
+                <button data-order="_Wedges">Add to Basket</button>
+            </div>
+
+            
+        
+        </section>
+    </article>
+
+  </body>
+
+  <script>
+
+    var items = []
+    var itemsJSON = localStorage.getItem("items");
+    var itemsParsed = JSON.parse(itemsJSON);
+    if(itemsParsed!=null){
+        for (var i = 0; i < itemsParsed.length; i++) {
+        items.push(itemsParsed[i]);
+    }
+    }
+
+    window.addEventListener("DOMContentLoaded", function(e){
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(button){
+
+            button.addEventListener("click", function(e){
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const orderItem = {
+                    itemType: "side",
+                    id: button.getAttribute("data-order"),
+                    size: "",
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    image: container.querySelector(".urlItem").innerText,
+                };
+                items.push(orderItem);
+                localStorage.setItem("items", JSON.stringify(items));
+            });
+
+        });
+    });
+
+  </script>
+
+  
+
+  <footer class = "footer">
+  </footer>   
+</html>
