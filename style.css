@@ -135,10 +135,17 @@ footer{
     
 }
 
+.ItemOption button:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
+  }
+
 .ItemOption button:hover{
     background-color: #4245dd;
 }
-
 
 
 
@@ -263,12 +270,8 @@ nav > ul > a{
 }
 
 
-nav ul a:hover {
-  color: #4245dd;
-}
-
 nav ul a:hover, nav ul a:focus,  a:active {
-    color: #4245dd;
+    color: #8b1f65;
     text-decoration: none;
 }
 
@@ -304,11 +307,11 @@ nav ul a:hover, nav ul a:focus,  a:active {
 
 .favouriteText{
     width:70%;
-    height:60%;
+    height:40%;
     margin-top: 50px;
     margin-bottom: 0px;
     color: white;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     background-color: rgb(23, 19, 45);
     padding: 0.3em;
